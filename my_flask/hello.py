@@ -3,7 +3,7 @@ from werkzeug.routing import BaseConverter
 
 # 设置根目录
 app = Flask(__name__,
-            static_url_path = "/static",
+            static_url_path = "/s",
             static_folder = "static",
             template_folder = "templates",
         )
@@ -36,4 +36,5 @@ def index(bid):
 
 
 if __name__ == "__main__":
+    print(app.url_map)
     app.run(host="0.0.0.0", port=5000)
